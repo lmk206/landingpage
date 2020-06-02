@@ -262,35 +262,75 @@ section{
                     z-index:10;
                 }
                 & div{
-                    width:46%;
                     overflow:hidden;
                 }
+                
                 & div:nth-of-type(1){
                     position:absolute;
-                    left:31%;
-                    top:31.7%;
+                    left:31.5%;
+                    top:31.8%;
+                    width:55.5%;
+                    height:30%;
+                }
+                & div:nth-of-type(1):after{
+                    content:'';
+                    width:0%;
+                    height:100%;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    background-color:#000;
+                    transition:.4s;
+                }
+                & div:nth-of-type(1):before{
+                    content:'';
+                    width:0%;
+                    height:100%;
+                    position:absolute;
+                    right:0;
+                    top:0;
+                    background-color:#000;
+                    transition:.4s;
                 }
                 & div:nth-of-type(2){
                     position:absolute;
-                    left:66%;
+                    left:66.5%;
                     top:56.2%;
                 }
                 & div:nth-of-type(3){
                     position:absolute;
                     left:26.3%;
-                    top:63%;
+                    top:63.1%;
                 }
                 & div img{
-                    margin-left:0px;
+                    // margin-left:0px;
                     opacity:1;
                     transition:.5s;
+                    height:100%;
                 }
                
             }
             & figure.active{
                 & div img{
                     opacity:0;
-                    margin-left:50px;
+                }
+                & div:nth-of-type(1):after{
+                    content:'';
+                    width:50%;
+                    height:100%;
+                    position:absolute;
+                    left:0;
+                    top:0;
+                    background-color:#000;
+                }
+                & div:nth-of-type(1):before{
+                    content:'';
+                    width:50%;
+                    height:100%;
+                    position:absolute;
+                    right:0;
+                    top:0;
+                    background-color:#000;
                 }
             }
         }

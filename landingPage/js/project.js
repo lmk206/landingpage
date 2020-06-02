@@ -116,7 +116,13 @@ window.addEventListener("DOMContentLoaded",function(){
     function loop(){
         interval = setInterval(function(){
                 figure.classList.add('active')
-                setTimeout(work,800); 
+                setTimeout(work,1000); 
+                wIdx++;
+                console.log(wIdx)
+                console.log(response.workPage.length)
+                if(wIdx > response.workPage.length-1){
+                    wIdx = 0;
+                }
                 change();
                 innerWork();
                 setTimeout(function(){
