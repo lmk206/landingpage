@@ -1,0 +1,111 @@
+@import url(common.css);
+body {
+  overflow-x: hidden;
+  overflow-y: hidden; }
+
+#total {
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+header {
+  width: 100%; }
+
+section {
+  width: 100%; }
+
+footer {
+  width: 100%; }
+
+header {
+  position: absolute;
+  z-index: 10; }
+  header div {
+    padding: 2%; }
+
+section .visual {
+  display: flex;
+  position: relative; }
+  section .visual img:nth-of-type(1) {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%; }
+  section .visual img:nth-of-type(2) {
+    position: relative;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%; }
+  section .visual img:nth-of-type(1).left {
+    animation: aniPosition1 .5s linear forwards; }
+  section .visual img:nth-of-type(2).right {
+    animation: aniPosition2 .5s linear forwards; }
+  section .visual figcaption {
+    z-index: 10;
+    position: absolute;
+    left: 25%;
+    top: 35%;
+    opacity: 1;
+    text-align: center;
+    color: #fff;
+    transition: .5s; }
+    section .visual figcaption h1 {
+      font-size: 4em;
+      position: relative;
+      opacity: 0;
+      margin-top: -5%;
+      transition: .5s; }
+    section .visual figcaption h1.show {
+      opacity: 1;
+      margin-top: 0%;
+      transition-delay: .5s; }
+    section .visual figcaption h1:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: #ddd;
+      position: absolute;
+      left: 0;
+      bottom: -10px; }
+    section .visual figcaption p {
+      white-space: pre-line;
+      margin-top: 150px;
+      font-size: 1rem;
+      color: #ddd;
+      opacity: 0;
+      transition: 1s; }
+    section .visual figcaption p.show {
+      opacity: 1;
+      margin-top: 100px;
+      transition-delay: 1s; }
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center; }
+  footer p {
+    color: #ddd;
+    position: relative;
+    padding: 2%;
+    margin: 0 auto; }
+
+@keyframes aniPosition1 {
+  0% {
+    transform: translateX(0%); }
+  50% {
+    transform: translateX(-50%); }
+  100% {
+    transform: translateX(-100%); } }
+@keyframes aniPosition2 {
+  0% {
+    transform: translateX(0%); }
+  50% {
+    transform: translateX(50%); }
+  100% {
+    transform: translateX(100%); } }
+
+/*# sourceMappingURL=index.css.map */

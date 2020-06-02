@@ -1,0 +1,175 @@
+@import url(common.css);
+#total {
+  width: 100%;
+  height: 100vh;
+  overflow-X: hidden;
+  overflow-Y: hidden; }
+
+header {
+  position: absolute;
+  z-index: 10;
+  height: 80%;
+  padding: 2%; }
+  header div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%; }
+  header .burger {
+    position: relative;
+    top: 35%;
+    padding: 20%;
+    opacity: 0;
+    transition: 1.5s; }
+    header .burger span {
+      position: absolute;
+      height: 2px;
+      background-color: #000;
+      display: block; }
+    header .burger span:nth-of-type(1) {
+      width: 15px;
+      top: 6px; }
+    header .burger span:nth-of-type(2) {
+      width: 20px;
+      top: 12px; }
+    header .burger span:nth-of-type(3) {
+      width: 10px;
+      top: 18px; }
+  header .burger.active {
+    opacity: 1; }
+  header .burger.show {
+    z-index: 20;
+    top: 35%; }
+    header .burger.show span {
+      background-color: #fff; }
+    header .burger.show span:nth-of-type(1) {
+      transform: translateY(7px) rotate(-45deg);
+      width: 20px; }
+    header .burger.show span:nth-of-type(2) {
+      opacity: 0; }
+    header .burger.show span:nth-of-type(3) {
+      transform: translateY(-5px) rotate(45deg);
+      width: 20px; }
+  header nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.7;
+    padding: 0;
+    transition: .5s ease-in-out;
+    overflow: hidden;
+    opacity: 0; }
+    header nav > ul {
+      display: flex;
+      position: absolute;
+      left: 25%;
+      top: 47%; }
+      header nav > ul li {
+        margin: 0 45% 0 0; }
+        header nav > ul li a {
+          color: #fff;
+          font-size: 2em; }
+  header nav.block {
+    display: block; }
+  header nav.show {
+    width: 100vw;
+    opacity: 0.7;
+    transition: .5s; }
+
+section {
+  height: 100%; }
+  section .container {
+    width: 100%;
+    height: 100%;
+    display: flex; }
+    section .container .left_con {
+      width: 30%;
+      height: 100%;
+      position: relative;
+      background-color: yellow;
+      left: -30%;
+      transition: .5s; }
+      section .container .left_con figure {
+        width: 20%;
+        padding: 3% 5%;
+        position: absolute;
+        opacity: 0;
+        right: 0;
+        top: 20%;
+        transition: .5s;
+        transition-delay: .5s; }
+        section .container .left_con figure img {
+          width: 100%; }
+        section .container .left_con figure figcaption {
+          text-align: center;
+          color: #fff; }
+      section .container .left_con figure.active {
+        background-color: #f95959;
+        width: 20%;
+        padding: 3% 5%;
+        position: absolute;
+        right: -15%;
+        top: 20%;
+        opacity: 1; }
+        section .container .left_con figure.active img {
+          width: 100%; }
+        section .container .left_con figure.active figcaption {
+          text-align: center;
+          color: #fff; }
+    section .container .left_con.active {
+      left: 0; }
+    section .container .right_con {
+      width: 70%;
+      height: 100%;
+      margin: 0 auto;
+      text-align: center;
+      opacity: 0;
+      top: 5%;
+      transition: .5s; }
+      section .container .right_con article {
+        padding-top: 10%;
+        height: 100%; }
+        section .container .right_con article h1 {
+          font-size: 2em;
+          margin-bottom: 5%;
+          white-space: pre-line; }
+      section .container .right_con span {
+        color: #f00; }
+      section .container .right_con form {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding: 3%; }
+        section .container .right_con form input {
+          width: 60%;
+          background-color: #ddd;
+          border: none;
+          padding: 1%;
+          margin: 1% auto; }
+        section .container .right_con form textarea {
+          width: 60%;
+          margin: 0 auto;
+          border: none;
+          background-color: #ddd;
+          padding: 1%; }
+        section .container .right_con form input:focus {
+          outline: none; }
+        section .container .right_con form textarea:focus {
+          outline: none;
+          border: none; }
+        section .container .right_con form .button {
+          width: 20%;
+          margin: 0 auto;
+          padding: 1%;
+          margin-top: 1%;
+          background-color: #00561f;
+          color: #fff; }
+    section .container .right_con.active {
+      top: 0%;
+      opacity: 1;
+      transition-delay: .7s; }
+
+/*# sourceMappingURL=contact.css.map */

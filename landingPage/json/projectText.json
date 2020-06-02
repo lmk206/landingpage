@@ -1,0 +1,30 @@
+{
+    "workText": [
+        [
+            "EVE ONLINE",
+            "웹 페이지 리디자인",
+            "기존 홈페이지와 다른 컨텐츠 요소를 추가하여 디자인 요소를 일부 수정하였습니다.",
+            "Used - Html5, Css3, Javascript, Jquery",
+            "Browser - Chrome, Ex11",
+            "Page - 10Pages"
+        ],
+
+        [
+            "John Wick",
+            "웹 페이지 제작",
+            "영화 컨텐츠를 주제로, 새 홈페이지를 제작하였습니다.",
+            "Used - Html5, Css3, Scss, Javascript, Jquery",
+            "Browser - Chrome, Ex11",
+            "Page - 6Pages"
+        ],
+
+        [
+            "Mini Deco",
+            "웹 페이지 리디자인",
+            "기존에 존재하는 홈페이지를 대상으로 디자인 구성을 새롭게 하여 제작하였습니다.",
+            "Used - Html5, Css3, Javascript, Jquery",
+            "Browser - Chrome, Ex11",
+            "Page - 8Pages"
+        ]
+    ] 
+}
