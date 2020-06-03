@@ -108,97 +108,58 @@ section {
         color: #fff; }
       section .container .left_con .left_text {
         position: absolute;
-        left: 25%;
+        left: 27%;
         top: 20%;
-        padding: 2% 10% 0 0; }
+        padding: 2% 8% 0 0; }
         section .container .left_con .left_text strong {
           font-size: 3em;
-          margin-top: 10px;
-          opacity: 0; }
+          margin-top: 10px; }
         section .container .left_con .left_text p {
           font-size: 1.5em;
-          margin-top: 10px;
-          opacity: 0; }
+          margin-top: 10px; }
         section .container .left_con .left_text > span {
           line-height: 25px;
           margin-top: 60px;
-          width: 80%;
-          opacity: 0; }
+          width: 80%; }
         section .container .left_con .left_text ul {
-          margin-top: 60px;
-          opacity: 0; }
+          margin-top: 60px; }
         section .container .left_con .left_text ul li {
           margin-top: 10px;
-          line-height: 30px;
-          opacity: 0; }
+          line-height: 30px; }
         section .container .left_con .left_text a {
           border: 1px solid #fff;
           padding: 2%;
-          margin-top: 11%;
-          opacity: 0; }
+          margin-top: 11%; }
         section .container .left_con .left_text .controler {
-          width: 100%;
+          width: 80%;
           display: flex;
           justify-content: space-around;
           position: absolute;
-          left: -10%;
-          bottom: -20%; }
+          left: 0%;
+          bottom: -20%;
+          z-index: 5; }
           section .container .left_con .left_text .controler > img {
-            width: 3%;
+            width: 25px;
             height: 5%;
-            margin-top: 2%; }
+            margin-top: 2%;
+            z-index: 10; }
           section .container .left_con .left_text .controler p {
             font-size: 1em;
             margin-top: 10px; }
           section .container .left_con .left_text .controler figure img {
-            margin: 10px; }
-          section .container .left_con .left_text .controler span {
-            margin-top: 10px;
-            opacity: 0;
-            transition: .5s;
-            position: absolute;
-            right: -60px; }
-          section .container .left_con .left_text .controler span.active {
-            opacity: 1; }
+            margin-top: 10px; }
+          section .container .left_con .left_text .controler .cont_btn {
+            position: relative;
+            width: 30px; }
+            section .container .left_con .left_text .controler .cont_btn span {
+              margin-top: 10px;
+              display: none;
+              transition: .5s;
+              position: absolute; }
+            section .container .left_con .left_text .controler .cont_btn span.active {
+              display: block; }
     section .container .left_con.active {
       left: 0; }
-      section .container .left_con.active .left_text strong {
-        font-size: 3em;
-        margin-top: 0;
-        opacity: 1;
-        transition: .5s;
-        transition-delay: .5s; }
-      section .container .left_con.active .left_text p {
-        font-size: 1.5em;
-        margin-top: 0;
-        opacity: 1;
-        transition: .5s;
-        transition-delay: 1s; }
-      section .container .left_con.active .left_text > span {
-        line-height: 25px;
-        margin-top: 50px;
-        width: 80%;
-        opacity: 1;
-        transition: .5s;
-        transition-delay: 1.5s; }
-      section .container .left_con.active .left_text ul {
-        margin-top: 50px;
-        opacity: 1;
-        transition: .5s;
-        transition-delay: 2s; }
-      section .container .left_con.active .left_text ul li {
-        line-height: 30px;
-        margin-top: 0;
-        opacity: 1;
-        transition: .5s;
-        transition-delay: 2.5s; }
-      section .container .left_con.active .left_text a {
-        border: 1px solid #fff;
-        padding: 2%;
-        margin-top: 10%;
-        opacity: 1;
-        transition: .5s;
-        transition-delay: 3s; }
     section .container .right_con {
       width: 55%;
       position: relative;
@@ -220,14 +181,14 @@ section {
         left: 26%;
         top: 62%; }
       section .container .right_con figure > img:nth-of-type(2) {
-        z-index: 10; }
+        z-index: 1; }
       section .container .right_con figure div {
         overflow: hidden; }
       section .container .right_con figure div:nth-of-type(1) {
         position: absolute;
-        left: 31.5%;
+        left: 31%;
         top: 31.8%;
-        width: 55.5%;
+        width: 45.5%;
         height: 30%; }
       section .container .right_con figure div:nth-of-type(1):after {
         content: '';
@@ -247,20 +208,52 @@ section {
         top: 0;
         background-color: #000;
         transition: .4s; }
+      section .container .right_con figure div:nth-of-type(2):after {
+        content: '';
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #000;
+        transition: .4s; }
+      section .container .right_con figure div:nth-of-type(2):before {
+        content: '';
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #000;
+        transition: .4s; }
+      section .container .right_con figure div:nth-of-type(3):after {
+        content: '';
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #000;
+        transition: .4s; }
+      section .container .right_con figure div:nth-of-type(3):before {
+        content: '';
+        width: 0%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #000;
+        transition: .4s; }
       section .container .right_con figure div:nth-of-type(2) {
         position: absolute;
-        left: 66.5%;
+        left: 66%;
         top: 56.2%; }
       section .container .right_con figure div:nth-of-type(3) {
         position: absolute;
         left: 26.3%;
-        top: 63.1%; }
+        top: 63%; }
       section .container .right_con figure div img {
-        opacity: 1;
-        transition: .5s;
         height: 100%; }
-      section .container .right_con figure.active div img {
-        opacity: 0; }
       section .container .right_con figure.active div:nth-of-type(1):after {
         content: '';
         width: 50%;
@@ -270,6 +263,38 @@ section {
         top: 0;
         background-color: #000; }
       section .container .right_con figure.active div:nth-of-type(1):before {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #000; }
+      section .container .right_con figure.active div:nth-of-type(2):after {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #000; }
+      section .container .right_con figure.active div:nth-of-type(2):before {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #000; }
+      section .container .right_con figure.active div:nth-of-type(3):after {
+        content: '';
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: #000; }
+      section .container .right_con figure.active div:nth-of-type(3):before {
         content: '';
         width: 50%;
         height: 100%;
@@ -288,7 +313,8 @@ section {
       opacity: 1;
       transform: scale(0);
       padding: 0.2%;
-      background-color: #fff; }
+      background-color: #fff;
+      z-index: 10; }
       section .container .pop_up figure {
         margin-top: 3%; }
         section .container .pop_up figure a {
@@ -341,5 +367,9 @@ footer {
 footer.active {
   opacity: 1;
   padding-left: 11.5%; }
+
+@media (max-width: 480px) {
+  div {
+    display: none; } }
 
 /*# sourceMappingURL=project.css.map */

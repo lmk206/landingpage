@@ -1,11 +1,8 @@
 <?
     include_once
     $_SERVER["DOCUMENT_ROOT"]."/admin/head.php";
+    page('contact/list.php');
 ?>
-
-    <section>
-
-    </section>
 
 <?
     include_once

@@ -42,9 +42,9 @@
                         <h1>사용자들에게 즐거움을 주는 
                             개발자가 되겠습니다.</h1>
                         <p>문의하실 내용이 있으시면 <span>010-9639-6293</span>으로 연락 주시거나 아래 메시지를 남겨주세요.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Your name">
-                            <input type="text" placeholder="Your Email">
+                        <form name="contact" method="post" action="admin/contact/request_res.php">
+                            <input type="text" placeholder="Your name" name="name">
+                            <input type="text" placeholder="Your Email" name="email">
                             <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea>
                             <input type="submit" value="send" class="button">
                         </form>

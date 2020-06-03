@@ -18,10 +18,10 @@ include_once
 <header>
     <?=$session?>님 환영합니다.
     <a href="/admin/logout.php">[로그아웃]</a>
-    <nav>
+    <!-- <nav>
         <a href="/admin/work/list.php">Portfolio</a>
         <a href="/admin/contact/list.php">Contact</a>
-    </nav>
+    </nav> -->
 </header>
     
 </body>

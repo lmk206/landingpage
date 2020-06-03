@@ -18,11 +18,13 @@ window.addEventListener("DOMContentLoaded",function(){
     var figure = document.querySelector('.right_con figure');
     var strong = document.querySelector('.left_text strong');
     var goPage = document.querySelector('.left_con .goHtml');
+    var playbtn = document.querySelectorAll('.cont_btn span');
     // 윈도우 로드시 전체 데이터 호출 함수 ------------------------------------------------------
     window.addEventListener("load",function(){
         setTimeout(function(){
             objActive();
         },0)
+        playbtn[1].classList.add('active');
     });
 
     // 버거메뉴 변환 -----------------------------------------------------------------
@@ -116,10 +118,9 @@ window.addEventListener("DOMContentLoaded",function(){
     function loop(){
         interval = setInterval(function(){
                 figure.classList.add('active')
-                setTimeout(work,1000); 
+                setTimeout(work,1200); 
                 wIdx++;
-                console.log(wIdx)
-                console.log(response.workPage.length)
+                
                 if(wIdx > response.workPage.length-1){
                     wIdx = 0;
                 }
@@ -131,6 +132,20 @@ window.addEventListener("DOMContentLoaded",function(){
         },5000)
     };
     loop();
+
+    // 클릭 시 무한루프 정지----------------------------------------------------
+
+    playbtn[0].addEventListener('click',function(){
+        loop();
+        this.classList.remove('active');
+        playbtn[1].classList.add('active');
+    })
+    playbtn[1].addEventListener('click',function(){
+        clearInterval(interval);
+        this.classList.remove('active');
+        playbtn[0].classList.add('active');
+    })
+
     // 버튼 클릭시 목업 이미지 변환 -----------------------------------------------
         controlBtn[1].addEventListener('click',function(e){
             wIdx++;
@@ -141,7 +156,6 @@ window.addEventListener("DOMContentLoaded",function(){
                 change();
                 innerWork();
             }
-
         })
 
         controlBtn[0].addEventListener('click',function(){
@@ -200,9 +214,6 @@ window.addEventListener("DOMContentLoaded",function(){
                     break;
             }
         }
-
-        
-        
     });
     //end
 })

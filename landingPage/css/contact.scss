@@ -154,6 +154,7 @@ section{
             & article{
                 padding-top:10%;
                 height:100%;
+                opacity:0;
 
                 h1{
                     font-size:2em;
@@ -203,8 +204,14 @@ section{
         }
         & .right_con.active{
             top:0%;
-            opacity:1;
             transition-delay:.7s;
+            transition:.5s;
+            opacity:1;
+            & article{
+                opacity:1;
+                transition:.6s;
+                transition-delay:.9s;
+            }
         }
     } 
 }
