@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded',function(){
         window.addEventListener('load',function(){
             setTimeout(function(){
                 objActive();
-            },600)   
+            },100)   
         });
         function objActive(){
             leftCon.classList.add('active');
@@ -62,7 +62,7 @@ window.addEventListener('DOMContentLoaded',function(){
             leftCon.classList.remove('active');
             rightCon.classList.remove('active');
             foot.classList.remove('active');
-            },700)
+            },500)
         }
     //end
 })

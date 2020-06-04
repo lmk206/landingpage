@@ -15,17 +15,14 @@
         top:0;
     }
 }
-// @each $item in (h1: 2em, h2: 1.5em, h3: 1.2em) {
-//     #{nth($item, 1)} {
-//       font-size: nth($item, 2);
-//     }
-//   }
+
 body{
     overflow-x:hidden;
     overflow-y:hidden;
 }
 #total{
     @include w100;
+    height:100vh;
     position:relative;
     overflow:hidden;
 }
@@ -45,7 +42,11 @@ header{
     }
 }
 section{
+    width:100%;
+    height:100%;
      .visual{
+        width:100%;
+        height:100%;
         display:flex;
         position:relative;
         $divide: ('img:nth-of-type(1)', 'img:nth-of-type(2)');
@@ -168,5 +169,47 @@ footer{
 // ------------------------------ media -------------------------------------
 
 @media(max-width:1024px){
-    
+    section .visual figcaption{
+        left:15%;
+
+        & h1{
+            font-size:3em;
+        }
+    }
+}
+@media(max-width:768px){
+    section .visual figcaption{
+        left:7%;
+
+        & h1{
+            font-size:2em;
+        }
+        & p{
+            padding:0 3% 0 3%;
+        }
+    }
+    section .visual figcaption h1.show:after{
+        width:70%;
+        left:15%;
+    }
+}
+@media(max-width:480px){
+    header div{
+        text-align:center;
+        margin-top:55px;
+    }
+    section .visual figcaption{
+        left:0%;
+
+        & h1{
+            font-size:1.5em;
+        }
+        & p{
+            padding: 0 10% 0 10%;
+        }
+    }
+    section .visual figcaption h1.show:after{
+        width:75%;
+        left:12%;
+    }
 }

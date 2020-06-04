@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded',function(){
     window.addEventListener('load',function(){
         setTimeout(function(){
             objActive();
-        },600)   
+        },100);   
     });
     
     burger.addEventListener('click',function(){
@@ -70,7 +70,6 @@ window.addEventListener('DOMContentLoaded',function(){
         sub_menu.classList.add('show');
         intro.classList.add('active');
         intro.classList.add('show');
-    
     }
 
     sessionStorage.clear(); 

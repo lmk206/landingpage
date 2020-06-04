@@ -19,10 +19,12 @@ window.addEventListener("DOMContentLoaded",function(){
     var strong = document.querySelector('.left_text strong');
     var goPage = document.querySelector('.left_con .goHtml');
     var playbtn = document.querySelectorAll('.cont_btn span');
+    var popA = document.querySelectorAll('.pop_up figure a');
     // 윈도우 로드시 전체 데이터 호출 함수 ------------------------------------------------------
     window.addEventListener("load",function(){
         setTimeout(function(){
             objActive();
+           
         },0)
         playbtn[1].classList.add('active');
     });
@@ -205,15 +207,38 @@ window.addEventListener("DOMContentLoaded",function(){
             switch(mp){
                 case "EVE ONLINE" : 
                     goPage.href = "https://lmk206.github.io/lmk206-portfolio_eveonline/html/index.html";
+                    
                     break;
                 case "John Wick" :
-                    goPage.href = '';
+                    goPage.href = 'https://lmk206.github.io/portfolio_johnwick/index.html';
+                    
                     break;
                 case "Mini Deco" :
-                    goPage.href = '';
+                    goPage.href = 'https://lmk206.github.io/Mini-Deco/portfolio_minideco/index.html';
+                    
                     break;
             }
         }
+
+        // 링크 페이지 클릭 시 해당 사이트로 이동 
+        function popMove(){
+            for(let u = 0 ; u < popA.length; u++){
+                popA[u].addEventListener('click',function(e){
+                    // e.preventDefault();
+                    if(u == 0){
+                        popA[0].href = "https://lmk206.github.io/lmk206-portfolio_eveonline/html/index.html";
+                    }
+                    if(u == 1){
+                        popA[1].href = 'https://lmk206.github.io/portfolio_johnwick/index.html';
+                    }
+                    if(u == 2){
+                        popA[2].href = 'https://lmk206.github.io/Mini-Deco/portfolio_minideco/index.html';
+                    } 
+                }) 
+            }
+        }
+        popMove();
+        
     });
     //end
 })

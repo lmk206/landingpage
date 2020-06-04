@@ -113,7 +113,7 @@ section{
             position:relative;
             left:-30%;
             transition:.5s;
-            & figure{
+            & .sub_menu{
                 background-color:#f95959;
                 width:15%;
                 padding:3% 5%; 
@@ -121,21 +121,26 @@ section{
                 right:0;
                 top:20%;
                 opacity:0;
-                transition:.5s;
-                transition-delay:.5s;
+                & img{
+                    opacity:0;
+                    width:100%;
+                }
             }
-            & figure.active{
+            & .sub_menu.active{
                 background-color:#f95959;
                 width:15%;
                 padding:3% 5%; 
                 position:absolute;
                 right:-13%;
                 top:20%;
-                opacity:1;  
+                opacity:1;
+                transition:1s; 
+                & img{
+                    opacity:1;
+                    width:100%;
+                } 
             }
-            & img{
-                width:100%;
-            }
+            
             & figcaption{
                 text-align:center;
                 color:#fff;
@@ -275,7 +280,7 @@ section{
             & article.active.show{
                 opacity:1;
                 padding-top:10%;
-                transition:.5s;
+                transition:1s;
             } 
         }
         & .right_con.active{

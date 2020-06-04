@@ -149,13 +149,20 @@ section {
           section .container .left_con .left_text .controler figure img {
             margin-top: 10px; }
           section .container .left_con .left_text .controler .cont_btn {
-            position: relative;
-            width: 30px; }
+            position: absolute;
+            width: 60px;
+            right: -160px;
+            top: -110px;
+            background-color: #f95959;
+            height: 35px;
+            padding: 1%;
+            border-radius: 50px; }
             section .container .left_con .left_text .controler .cont_btn span {
-              margin-top: 10px;
               display: none;
               transition: .5s;
-              position: absolute; }
+              position: absolute;
+              left: 20px;
+              top: 6px; }
             section .container .left_con .left_text .controler .cont_btn span.active {
               display: block; }
     section .container .left_con.active {
@@ -368,8 +375,9 @@ footer.active {
   opacity: 1;
   padding-left: 11.5%; }
 
-@media (max-width: 480px) {
-  div {
-    display: none; } }
+@media (max-width: 1024px) {
+  #total {
+    overflow-x: scroll;
+    overflow-y: scroll; } }
 
 /*# sourceMappingURL=project.css.map */

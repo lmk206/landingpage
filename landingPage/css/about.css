@@ -91,26 +91,29 @@ section {
       position: relative;
       left: -30%;
       transition: .5s; }
-      section .container .left_con figure {
+      section .container .left_con .sub_menu {
         background-color: #f95959;
         width: 15%;
         padding: 3% 5%;
         position: absolute;
         right: 0;
         top: 20%;
-        opacity: 0;
-        transition: .5s;
-        transition-delay: .5s; }
-      section .container .left_con figure.active {
+        opacity: 0; }
+        section .container .left_con .sub_menu img {
+          opacity: 0;
+          width: 100%; }
+      section .container .left_con .sub_menu.active {
         background-color: #f95959;
         width: 15%;
         padding: 3% 5%;
         position: absolute;
         right: -13%;
         top: 20%;
-        opacity: 1; }
-      section .container .left_con img {
-        width: 100%; }
+        opacity: 1;
+        transition: 1s; }
+        section .container .left_con .sub_menu.active img {
+          opacity: 1;
+          width: 100%; }
       section .container .left_con figcaption {
         text-align: center;
         color: #fff; }
@@ -233,7 +236,7 @@ section {
       section .container .right_con article.active.show {
         opacity: 1;
         padding-top: 10%;
-        transition: .5s; }
+        transition: 1s; }
     section .container .right_con.active {
       top: 0;
       transition-delay: .7s;

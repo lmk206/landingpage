@@ -93,14 +93,14 @@ section {
       left: -30%;
       transition: .5s; }
       section .container .left_con figure {
+        background-color: #f95959;
         width: 20%;
         padding: 3% 5%;
         position: absolute;
-        opacity: 0;
         right: 0;
         top: 20%;
-        transition: .5s;
-        transition-delay: .5s; }
+        opacity: 0;
+        transition: 1s; }
         section .container .left_con figure img {
           width: 100%; }
         section .container .left_con figure figcaption {
@@ -113,12 +113,19 @@ section {
         position: absolute;
         right: -15%;
         top: 20%;
-        opacity: 1; }
+        opacity: 1;
+        transition: 1s; }
         section .container .left_con figure.active img {
           width: 100%; }
         section .container .left_con figure.active figcaption {
           text-align: center;
           color: #fff; }
+    section .container .contact_link {
+      display: flex;
+      justify-content: space-around;
+      background-color: #f95959;
+      width: 100%;
+      margin-top: 20px; }
     section .container .left_con.active {
       left: 0; }
     section .container .right_con {
