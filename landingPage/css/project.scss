@@ -3,12 +3,13 @@
 @mixin w100($wid:100%){
     width:$wid;
 }
-
+body{
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
 #total{
     @include w100;
     height:100vh;
-    overflow-X:hidden;
-    overflow-Y:hidden;
 }
 
 header{
@@ -121,7 +122,6 @@ section{
                 position:absolute;
                 left:27%;
                 top:20%;
-                padding:2% 8% 0 0;
                 & strong{
                     font-size:3em;
                     margin-top:10px;
@@ -156,7 +156,7 @@ section{
                 & .controler{
                     width:80%;
                     display:flex;
-                    justify-content: space-around;
+                    justify-content: space-between;
                     position:absolute;
                     left:0%;
                     bottom:-20%;
@@ -175,13 +175,13 @@ section{
                         margin-top:10px;
                     }
                     & .cont_btn{
-                        position:absolute;
-                        width:60px;
-                        right:-160px;
-                        top:-110px;
+                        position:fixed;
+                        width:72px;
+                        left:43%;
+                        top:50%;
                         background-color:#f95959;
-                        height:35px;
-                        padding:1%;
+                        height:43px;
+                        padding:0%;
                         border-radius:50px;
                         & span{
                             // margin-top:10px;
@@ -224,6 +224,7 @@ section{
                 position:absolute;
                 left:26%;
                 top:62%;
+                z-index:10;
             }
             & figure{
                 & > img:nth-of-type(2){
@@ -231,8 +232,34 @@ section{
                 }
                 & div{
                     overflow:hidden;
+                    & img{
+                        width:100%;
+                    }
                 }
-                
+                $nth:3;
+                @for $d from 1 through $nth{
+                    & div:nth-of-type(#{$d}):after{
+                        content:'';
+                        width:0%;
+                        height:100%;
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        background-color:#000;
+                        transition:.4s;
+                    }
+
+                    & div:nth-of-type(#{$d}):before{
+                        content:'';
+                        width:0%;
+                        height:100%;
+                        position:absolute;
+                        right:0;
+                        top:0;
+                        background-color:#000;
+                        transition:.4s;
+                    }
+                }
                 & div:nth-of-type(1){
                     position:absolute;
                     left:31%;
@@ -240,66 +267,7 @@ section{
                     width:45.5%;
                     height:30%;
                 }
-                & div:nth-of-type(1):after{
-                    content:'';
-                    width:0%;
-                    height:100%;
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    background-color:#000;
-                    transition:.4s;
-                }
-                & div:nth-of-type(1):before{
-                    content:'';
-                    width:0%;
-                    height:100%;
-                    position:absolute;
-                    right:0;
-                    top:0;
-                    background-color:#000;
-                    transition:.4s;
-                }
-                & div:nth-of-type(2):after{
-                    content:'';
-                    width:0%;
-                    height:100%;
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    background-color:#000;
-                    transition:.4s;
-                }
-                & div:nth-of-type(2):before{
-                    content:'';
-                    width:0%;
-                    height:100%;
-                    position:absolute;
-                    right:0;
-                    top:0;
-                    background-color:#000;
-                    transition:.4s;
-                }
-                & div:nth-of-type(3):after{
-                    content:'';
-                    width:0%;
-                    height:100%;
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    background-color:#000;
-                    transition:.4s;
-                }
-                & div:nth-of-type(3):before{
-                    content:'';
-                    width:0%;
-                    height:100%;
-                    position:absolute;
-                    right:0;
-                    top:0;
-                    background-color:#000;
-                    transition:.4s;
-                }
+                
                 & div:nth-of-type(2){
                     position:absolute;
                     left:66%;
@@ -311,69 +279,36 @@ section{
                     top:63%;
                 }
                 & div img{
-                    // margin-left:0px;
-                    height:100%;
+                    width:100%;
                 }
                
             }
             & figure.active{
+                $nth:3;
+                @for $d from 1 through $nth{
+                        & div:nth-of-type(#{$d}):after{
+                            content:'';
+                            width:50%;
+                            height:100%;
+                            position:absolute;
+                            left:0;
+                            top:0;
+                            background-color:#000;
+                            transition:.4s;
+                        }
+    
+                        & div:nth-of-type(#{$d}):before{
+                            content:'';
+                            width:50%;
+                            height:100%;
+                            position:absolute;
+                            right:0;
+                            top:0;
+                            background-color:#000;
+                            transition:.4s;
+                        }
+                }
                 
-                & div:nth-of-type(1):after{
-                    content:'';
-                    width:50%;
-                    height:100%;
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    background-color:#000;
-                }
-                & div:nth-of-type(1):before{
-                    content:'';
-                    width:50%;
-                    height:100%;
-                    position:absolute;
-                    right:0;
-                    top:0;
-                    background-color:#000;
-                }
-
-                & div:nth-of-type(2):after{
-                    content:'';
-                    width:50%;
-                    height:100%;
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    background-color:#000;
-                }
-                & div:nth-of-type(2):before{
-                    content:'';
-                    width:50%;
-                    height:100%;
-                    position:absolute;
-                    right:0;
-                    top:0;
-                    background-color:#000;
-                }
-
-                & div:nth-of-type(3):after{
-                    content:'';
-                    width:50%;
-                    height:100%;
-                    position:absolute;
-                    left:0;
-                    top:0;
-                    background-color:#000;
-                }
-                & div:nth-of-type(3):before{
-                    content:'';
-                    width:50%;
-                    height:100%;
-                    position:absolute;
-                    right:0;
-                    top:0;
-                    background-color:#000;
-                }
             }
         }
         & .right_con.active{
@@ -460,14 +395,155 @@ footer.active{
 // ------------------------------------- media ----------------------------------
 
 @media(max-width:1024px){
-    #total{
+    body{
         overflow-x:scroll;
         overflow-y:scroll;
     }
+    header{
+        width:90%;
+        display:block;
+        height:160px;
+
+        & div:first-child{
+            display:flex;
+            flex-direction:row;
+            height:inherit;
+            justify-content:space-between;
+        }
+
+        & .burger{
+            top:26%;
+            padding:0;
+            vertical-align:middle;
+
+            & span{
+                background-color:#000;
+            }
+        }
+        & .burger.show{
+            top:26%;
+        }
+        & nav{
+            width:100vw;
+            height:0;
+        }
+        & nav.show{
+            height:100vh;
+        }
+    }
+    header nav > ul {
+        display:block;
+        position: absolute;
+        left: 44%;
+        top: 35%;
+        text-align: center;
+        & li{
+            margin-right:0;
+        }
+    }
     
+    section .container .left_con .left_text{
+        left:20%;
+        top:20%;
+    }
+
+    section .container .right_con .pc{
+        left:5%;
+        top:25%;
+    }
+    section .container .right_con .pad{
+        left:45%;
+    }
+    section .container .right_con .mobile{
+        left:15%;
+    }
+   
+    section .container .right_con figure div:nth-of-type(1){
+        left:7%;
+        width:85.5%;
+        height:31.8%;
+        top:26.8%;
+    }
+    section .container .right_con figure div:nth-of-type(2){
+        left: 46%;
+        top: 56.2%;
+        width: 52%;
+    }
+    section .container .right_con figure div:nth-of-type(3){
+        left: 15.5%;
+    }
+    section .container .left_con .left_text .controler .cont_btn {
+        position: fixed;
+        width: 72px;
+        left: 41.5%;
+        top: 75%;
+    }
+
 }
 @media(max-width:768px){
+    header{
+        z-index:50;
+    }
+    section .container{
+        display:block;
 
+        & .left_con{
+            width:100%;
+            height:100%;
+            position:absolute;
+            left:0;
+            top:34%;
+            margin-top:11%;
+        }
+
+        & .right_con{
+            width:100%;
+            height:60%;
+            position:absolute;
+            z-index:10;
+            left:0;
+            top:0;
+        }
+    }
+
+    section .container .right_con .pc {
+        left: 25%;
+        top: 40%;
+        width:50%;
+    }
+    section .container .right_con .pad {
+        left: 62%;
+        top: 77%;
+        width:25%;
+    }
+    section .container .right_con .mobile {
+        left: 16%;
+        top: 84%;
+        width:6%;
+    }
+    section .container .right_con figure div:nth-of-type(1) {
+        left: 26%;
+        width: 48.5%;
+        height: 40.8%;
+        top: 42.3%;
+    }
+    section .container .right_con figure div:nth-of-type(2) {
+        left: 63%;
+        top: 78.3%;
+        width: 23%;
+    }
+    section .container .right_con figure div:nth-of-type(3) {
+        left: 16.2%;
+        top: 84.6%;
+        width: 5.7%;
+    }
+    footer.active{
+        width:100%;
+        position:absolute;
+        margin:0 auto;
+        padding-left:0;
+        top:140%;
+    }
 }
 @media(max-width:480px){
 

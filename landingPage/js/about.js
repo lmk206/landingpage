@@ -79,33 +79,45 @@ window.addEventListener('DOMContentLoaded',function(){
         switch(sessionStorage.name){
             case "intro" : 
                 num = 0;
-                setTimeout(intro1,500);
+                setTimeout(intro1,300);
                 function intro1(){ 
                     sub_menu.classList.add('active');
-                    sub_menu.classList.add('show');
+                    setTimeout(function(){
+                        sub_menu.classList.add('show');
+                    },500)
                     intro.classList.add('active');
-                    intro.classList.add('show');
+                    setTimeout(function(){
+                        intro.classList.add('show');
+                    },500)
                 }
                 break;
             case "skills" : 
                 num = 1;
-                setTimeout(skills1,500);
+                setTimeout(skills1,300);
                 function skills1(){
                     sub_menu.classList.add('active');
-                    sub_menu.classList.add('show');
+                    setTimeout(function(){
+                        sub_menu.classList.add('show');
+                    },200)
                     skills.classList.add('active');
-                    skills.classList.add('show');
+                    setTimeout(function(){
+                        skills.classList.add('show');
+                    },200)
                 }
                 break;
 
             case "vision" : 
                 num = 2;
-                setTimeout(vision1,500);
+                setTimeout(vision1,300);
                 function vision1(){
                     sub_menu.classList.add('active');
-                    sub_menu.classList.add('show'); 
+                    setTimeout(function(){
+                        sub_menu.classList.add('show'); 
+                    },200);
                     vision.classList.add('active');
-                    vision.classList.add('show');
+                    setTimeout(function(){
+                        vision.classList.add('show');
+                    },200)
                 }
                 break;
         }
@@ -124,15 +136,15 @@ window.addEventListener('DOMContentLoaded',function(){
         intro.classList.remove('show');
         setTimeout(function(){
             intro.classList.remove('active');
-        },1000)
+        },800)
         skills.classList.remove('show');
         setTimeout(function(){
             skills.classList.remove('active');
-        },1000);
+        },800);
         vision.classList.remove('show');
         setTimeout(function(){
             vision.classList.remove('active');
-        },1000)
+        },800)
         setTimeout(aboutShow,500);
     }
         
