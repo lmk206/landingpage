@@ -20,6 +20,7 @@ window.addEventListener("DOMContentLoaded",function(){
     var goPage = document.querySelector('.left_con .goHtml');
     var playbtn = document.querySelectorAll('.cont_btn span');
     var popA = document.querySelectorAll('.pop_up figure a');
+    var middleBtn = document.querySelector('.cont_btn');
     // 윈도우 로드시 전체 데이터 호출 함수 ------------------------------------------------------
     window.addEventListener("load",function(){
         setTimeout(function(){
@@ -83,6 +84,7 @@ window.addEventListener("DOMContentLoaded",function(){
         nav.classList.remove('block');
         nav.classList.remove('show');
         burger.classList.remove('show');
+        middleBtn.style.opacity=0;
         setTimeout(function(){
         leftCon.classList.remove('active');
         rightCon.classList.remove('active');
