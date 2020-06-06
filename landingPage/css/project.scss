@@ -290,20 +290,20 @@ section{
                 & div:nth-of-type(1){
                     position:absolute;
                     left:31%;
-                    top:31.8%;
+                    top:31.6%;
                     width:45.5%;
-                    height:30%;
+                    height:25%;
                 }
                 
                 & div:nth-of-type(2){
                     position:absolute;
                     left:66%;
-                    top:56.2%;
+                    top:56%;
                 }
                 & div:nth-of-type(3){
                     position:absolute;
                     left:26.3%;
-                    top:63%;
+                    top:62.8%;
                 }
                 & div img{
                     width:100%;
@@ -495,12 +495,12 @@ footer.active{
     section .container .right_con figure div:nth-of-type(1){
         left:7%;
         width:85.5%;
-        height:31.8%;
-        top:26.8%;
+        height:25.8%;
+        top:26.5%;
     }
     section .container .right_con figure div:nth-of-type(2){
         left: 46%;
-        top: 56.2%;
+        top: 55.2%;
         width: 52%;
     }
     section .container .right_con figure div:nth-of-type(3){
@@ -510,8 +510,12 @@ footer.active{
         position: fixed;
         width: 57px;
         left: 42.5%;
-        top: 65%;
+        top: 50%;
         height:34px;
+        & span{
+            left:0;
+            top:-6px;
+        }
     }
 
 }
@@ -573,8 +577,8 @@ footer.active{
     section .container .right_con figure div:nth-of-type(1) {
         left: 26%;
         width: 48.5%;
-        height: 40.8%;
-        top: 42.3%;
+        height: 35.8%;
+        top: 42%;
     }
     section .container .right_con figure div:nth-of-type(2) {
         left: 63%;
