@@ -25,7 +25,6 @@ window.addEventListener("DOMContentLoaded",function(){
     window.addEventListener("load",function(){
         setTimeout(function(){
             objActive();
-           
         },0)
         playbtn[1].classList.add('active');
     });

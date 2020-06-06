@@ -16,6 +16,7 @@ window.addEventListener('DOMContentLoaded',function(){
                 objActive();
             },100)   
         });
+        
         function objActive(){
             leftCon.classList.add('active');
             rightCon.classList.add('active');
