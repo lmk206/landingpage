@@ -1,245 +1,378 @@
-@import url(common.css);
+@import url(d:\portfolio\landingPage\landingPage\css\common.css);
 #total {
   width: 100%;
   height: 100vh;
   overflow-X: hidden;
-  overflow-Y: hidden; }
+  overflow-Y: hidden;
+}
 
 header {
   position: absolute;
   z-index: 10;
   height: 80%;
-  padding: 2%; }
-  header div:first-child {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: 100%; }
-  header .burger {
-    position: relative;
-    top: 35%;
-    padding: 20%;
-    opacity: 0;
-    transition: 1.5s; }
-    header .burger span {
-      position: absolute;
-      height: 2px;
-      background-color: #000;
-      display: block; }
-    header .burger span:nth-of-type(1) {
-      width: 15px;
-      top: 6px; }
-    header .burger span:nth-of-type(2) {
-      width: 20px;
-      top: 12px; }
-    header .burger span:nth-of-type(3) {
-      width: 10px;
-      top: 18px; }
-  header .burger.active {
-    opacity: 1; }
-  header .burger.show {
-    z-index: 20;
-    top: 35%; }
-    header .burger.show span {
-      background-color: #fff; }
-    header .burger.show span:nth-of-type(1) {
-      transform: translateY(7px) rotate(-45deg);
-      width: 20px; }
-    header .burger.show span:nth-of-type(2) {
-      opacity: 0; }
-    header .burger.show span:nth-of-type(3) {
-      transform: translateY(-5px) rotate(45deg);
-      width: 20px; }
-  header nav {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100vh;
-    background-color: #000;
-    padding: 0;
-    transition: .5s ease-in-out;
-    overflow: hidden;
-    opacity: 0; }
-    header nav > ul {
-      display: flex;
-      position: absolute;
-      left: 25%;
-      top: 47%; }
-      header nav > ul li {
-        margin: 0 45% 0 0; }
-        header nav > ul li a {
-          color: #fff;
-          font-size: 2em; }
-  header nav.block {
-    display: block; }
-  header nav.show {
-    width: 100vw;
-    opacity: 0.7;
-    transition: .5s; }
+  padding: 2%;
+}
+
+header div:first-child {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+header .burger {
+  position: relative;
+  top: 35%;
+  padding: 20%;
+  opacity: 0;
+  -webkit-transition: 1.5s;
+  transition: 1.5s;
+}
+
+header .burger span {
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  display: block;
+}
+
+header .burger span:nth-of-type(1) {
+  width: 15px;
+  top: 6px;
+}
+
+header .burger span:nth-of-type(2) {
+  width: 20px;
+  top: 12px;
+}
+
+header .burger span:nth-of-type(3) {
+  width: 10px;
+  top: 18px;
+}
+
+header .burger.active {
+  opacity: 1;
+}
+
+header .burger.show {
+  z-index: 20;
+  top: 35%;
+}
+
+header .burger.show span {
+  background-color: #fff;
+}
+
+header .burger.show span:nth-of-type(1) {
+  -webkit-transform: translateY(7px) rotate(-45deg);
+          transform: translateY(7px) rotate(-45deg);
+  width: 20px;
+}
+
+header .burger.show span:nth-of-type(2) {
+  opacity: 0;
+}
+
+header .burger.show span:nth-of-type(3) {
+  -webkit-transform: translateY(-5px) rotate(45deg);
+          transform: translateY(-5px) rotate(45deg);
+  width: 20px;
+}
+
+header nav {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100vh;
+  background-color: #000;
+  padding: 0;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  overflow: hidden;
+  opacity: 0;
+}
+
+header nav > ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 25%;
+  top: 47%;
+}
+
+header nav > ul li {
+  margin: 0 45% 0 0;
+}
+
+header nav > ul li a {
+  color: #fff;
+  font-size: 2em;
+}
+
+header nav.block {
+  display: block;
+}
+
+header nav.show {
+  width: 100vw;
+  opacity: 0.7;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
 
 section {
-  height: 100%; }
-  section .container {
-    width: 100%;
-    height: 100%;
-    display: flex; }
-    section .container .left_con {
-      width: 30%;
-      height: 100%;
-      background-color: yellow;
-      position: relative;
-      left: -30%;
-      transition: .5s; }
-      section .container .left_con .sub_menu {
-        background-color: #f95959;
-        width: 15%;
-        padding: 3% 5%;
-        position: absolute;
-        right: 0;
-        top: 20%;
-        opacity: 0; }
-        section .container .left_con .sub_menu img {
-          opacity: 0;
-          width: 100%; }
-      section .container .left_con .sub_menu.active {
-        background-color: #f95959;
-        width: 15%;
-        padding: 3% 5%;
-        position: absolute;
-        right: -13%;
-        top: 20%;
-        opacity: 1;
-        transition: 1s; }
-        section .container .left_con .sub_menu.active img {
-          opacity: 1;
-          width: 100%; }
-      section .container .left_con figcaption {
-        text-align: center;
-        color: #fff; }
-        section .container .left_con figcaption p {
-          width: 100%;
-          text-align: left;
-          padding: 1%;
-          transition: .5s; }
-          section .container .left_con figcaption p span {
-            background-color: #fff;
-            width: 10px;
-            height: 10px;
-            border-radius: 50px;
-            margin-right: 10px; }
-        section .container .left_con figcaption p:hover {
-          color: #000; }
-          section .container .left_con figcaption p:hover span {
-            background-color: yellow; }
-    section .container .left_con.active {
-      left: 0; }
-    section .container .right_con {
-      width: 70%;
-      height: 100%;
-      margin: 0 auto;
-      text-align: center;
-      top: 15%;
-      transition: .5s;
-      opacity: 0; }
-      section .container .right_con > article {
-        padding-top: 10%;
-        display: none; }
-      section .container .right_con > article.active {
-        padding-top: 10%;
-        display: block;
-        opacity: 0;
-        transition: 1s; }
-        section .container .right_con > article.active h2 {
-          font-size: 2em;
-          margin-bottom: 4%;
-          white-space: pre-line; }
-        section .container .right_con > article.active .intro_con {
-          display: flex;
-          margin-left: 100px;
-          padding: 0; }
-          section .container .right_con > article.active .intro_con .pic {
-            width: 40%;
-            height: 40%; }
-          section .container .right_con > article.active .intro_con article {
-            margin: 5%; }
-            section .container .right_con > article.active .intro_con article div {
-              text-align: left;
-              padding: 5%;
-              position: relative; }
-              section .container .right_con > article.active .intro_con article div h3:after {
-                content: '';
-                display: inline-block;
-                position: absolute;
-                background-color: #f8a6a6;
-                left: 22px;
-                top: 33px;
-                opacity: 0.6;
-                width: 26%;
-                height: 10%;
-                margin-top: 0.5%; }
-            section .container .right_con > article.active .intro_con article div:nth-of-type(1) h3:after {
-              content: '';
-              display: inline-block;
-              position: absolute;
-              background-color: #f8a6a6;
-              left: 22px;
-              top: 33px;
-              opacity: 0.6;
-              width: 14%; }
-            section .container .right_con > article.active .intro_con article div:nth-of-type(3) h3:after {
-              content: '';
-              display: inline-block;
-              position: absolute;
-              background-color: #f8a6a6;
-              left: 22px;
-              top: 33px;
-              opacity: 0.6;
-              width: 21%; }
-        section .container .right_con > article.active .img_con {
-          display: flex;
-          flex-wrap: wrap;
-          padding: 4%;
-          margin-left: 2%; }
-        section .container .right_con > article.active figure {
-          border: 1px solid #000;
-          width: 25%;
-          height: 200px;
-          margin: 2% auto;
-          padding: 1%; }
-          section .container .right_con > article.active figure img {
-            width: 25%;
-            height: 40%;
-            margin-top: 10px; }
-          section .container .right_con > article.active figure figcaption {
-            padding-top: 20px;
-            white-space: pre-line; }
-        section .container .right_con > article.active .vision_text {
-          width: 70%;
-          padding: 5% 0 0 15%; }
-        section .container .right_con > article.active div h3 {
-          text-align: left;
-          font-size: 1.2em;
-          margin-bottom: 15px; }
-        section .container .right_con > article.active ol {
-          list-style-type: decimal;
-          width: 100%;
-          text-align: left;
-          line-height: 30px; }
-          section .container .right_con > article.active ol li {
-            list-style-type: decimal;
-            font-weight: 600;
-            margin-bottom: 10px; }
-            section .container .right_con > article.active ol li p {
-              font-weight: 400; }
-      section .container .right_con article.active.show {
-        opacity: 1;
-        padding-top: 10%;
-        transition: 1s; }
-    section .container .right_con.active {
-      top: 0;
-      transition-delay: .7s;
-      opacity: 1; }
+  height: 100%;
+}
+
+section .container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section .container .left_con {
+  width: 30%;
+  height: 100%;
+  background-color: yellow;
+  position: relative;
+  left: -30%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+section .container .left_con .sub_menu {
+  background-color: #f95959;
+  width: 15%;
+  padding: 3% 5%;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  opacity: 0;
+}
+
+section .container .left_con .sub_menu img {
+  opacity: 0;
+  width: 100%;
+}
+
+section .container .left_con .sub_menu.active {
+  background-color: #f95959;
+  width: 15%;
+  padding: 3% 5%;
+  position: absolute;
+  right: -13%;
+  top: 20%;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section .container .left_con .sub_menu.active img {
+  opacity: 1;
+  width: 100%;
+}
+
+section .container .left_con figcaption {
+  text-align: center;
+  color: #fff;
+}
+
+section .container .left_con figcaption p {
+  width: 100%;
+  text-align: left;
+  padding: 1%;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+section .container .left_con figcaption p span {
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+section .container .left_con figcaption p:hover {
+  color: #000;
+}
+
+section .container .left_con figcaption p:hover span {
+  background-color: yellow;
+}
+
+section .container .left_con.active {
+  left: 0;
+}
+
+section .container .right_con {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  top: 15%;
+  -webkit-transition: .5s;
+  transition: .5s;
+  opacity: 0;
+}
+
+section .container .right_con > article {
+  padding-top: 10%;
+  display: none;
+}
+
+section .container .right_con > article.active {
+  padding-top: 10%;
+  display: block;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section .container .right_con > article.active h2 {
+  font-size: 2em;
+  margin-bottom: 4%;
+  white-space: pre-line;
+}
+
+section .container .right_con > article.active .intro_con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 100px;
+  padding: 0;
+}
+
+section .container .right_con > article.active .intro_con .pic {
+  width: 40%;
+  height: 40%;
+}
+
+section .container .right_con > article.active .intro_con article {
+  margin: 5%;
+}
+
+section .container .right_con > article.active .intro_con article div {
+  text-align: left;
+  padding: 5%;
+  position: relative;
+}
+
+section .container .right_con > article.active .intro_con article div h3:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #f8a6a6;
+  left: 22px;
+  top: 33px;
+  opacity: 0.6;
+  width: 26%;
+  height: 10%;
+  margin-top: 0.5%;
+}
+
+section .container .right_con > article.active .intro_con article div:nth-of-type(1) h3:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #f8a6a6;
+  left: 22px;
+  top: 33px;
+  opacity: 0.6;
+  width: 14%;
+}
+
+section .container .right_con > article.active .intro_con article div:nth-of-type(3) h3:after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-color: #f8a6a6;
+  left: 22px;
+  top: 33px;
+  opacity: 0.6;
+  width: 21%;
+}
+
+section .container .right_con > article.active .img_con {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 4%;
+  margin-left: 2%;
+}
+
+section .container .right_con > article.active figure {
+  border: 1px solid #000;
+  width: 25%;
+  height: 200px;
+  margin: 2% auto;
+  padding: 1%;
+}
+
+section .container .right_con > article.active figure img {
+  width: 25%;
+  height: 40%;
+  margin-top: 10px;
+}
+
+section .container .right_con > article.active figure figcaption {
+  padding-top: 20px;
+  white-space: pre-line;
+}
+
+section .container .right_con > article.active .vision_text {
+  width: 70%;
+  padding: 5% 0 0 15%;
+}
+
+section .container .right_con > article.active div h3 {
+  text-align: left;
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+section .container .right_con > article.active ol {
+  list-style-type: decimal;
+  width: 100%;
+  text-align: left;
+  line-height: 30px;
+}
+
+section .container .right_con > article.active ol li {
+  list-style-type: decimal;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+section .container .right_con > article.active ol li p {
+  font-weight: 400;
+}
+
+section .container .right_con article.active.show {
+  opacity: 1;
+  padding-top: 10%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+section .container .right_con.active {
+  top: 0;
+  -webkit-transition-delay: .7s;
+          transition-delay: .7s;
+  opacity: 1;
+}
 
 footer {
   position: absolute;
@@ -248,15 +381,19 @@ footer {
   text-align: center;
   opacity: 0;
   padding-left: 0%;
-  transition: 1s; }
-  footer p {
-    width: 100%;
-    color: #000;
-    position: relative;
-    margin: 0 auto; }
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+footer p {
+  width: 100%;
+  color: #000;
+  position: relative;
+  margin: 0 auto;
+}
 
 footer.active {
   opacity: 1;
-  padding-left: 3%; }
-
+  padding-left: 3%;
+}
 /*# sourceMappingURL=about.css.map */
