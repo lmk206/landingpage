@@ -1,4 +1,4 @@
-@import "common.css";
+@import url('common.css');
 
 @mixin w100($wid:100%){
     width:$wid;

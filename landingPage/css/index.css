@@ -1,277 +1,154 @@
-@import url(d:\portfolio\landingPage\landingPage\css\common.css);
+@import url("common.css");
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
-}
+  overflow-y: hidden; }
 
 #total {
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 header {
-  width: 100%;
-}
+  width: 100%; }
 
 section {
-  width: 100%;
-}
+  width: 100%; }
 
 footer {
-  width: 100%;
-}
+  width: 100%; }
 
 header {
   position: absolute;
-  z-index: 10;
-}
-
-header div {
-  padding: 2%;
-}
+  z-index: 10; }
+  header div {
+    padding: 2%; }
 
 section {
   width: 100%;
-  height: 100%;
-}
-
-section .visual {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  position: relative;
-}
-
-section .visual img:nth-of-type(1) {
-  position: relative;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-}
-
-section .visual img:nth-of-type(2) {
-  position: relative;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 50%;
-}
-
-section .visual img:nth-of-type(1).left {
-  -webkit-animation: aniPosition1 .5s linear forwards;
-          animation: aniPosition1 .5s linear forwards;
-}
-
-section .visual img:nth-of-type(2).right {
-  -webkit-animation: aniPosition2 .5s linear forwards;
-          animation: aniPosition2 .5s linear forwards;
-}
-
-section .visual figcaption {
-  z-index: 10;
-  position: absolute;
-  left: 25%;
-  top: 35%;
-  opacity: 1;
-  text-align: center;
-  color: #fff;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-section .visual figcaption h1 {
-  color: #fff;
-  font-size: 4em;
-  position: relative;
-  opacity: 0;
-  margin-top: -5%;
-}
-
-section .visual figcaption h1.show {
-  -webkit-animation: h1 1s forwards;
-          animation: h1 1s forwards;
-}
-
-section .visual figcaption h1:after {
-  content: '';
-  display: inline-block;
-  width: 0%;
-  height: 2px;
-  background-color: #ddd;
-  position: absolute;
-  left: 50%;
-  bottom: -10px;
-  -webkit-transition: .5s .5s;
-  transition: .5s .5s;
-}
-
-section .visual figcaption h1.show:after {
-  width: 100%;
-  left: 0;
-}
-
-section .visual figcaption p {
-  white-space: pre-line;
-  margin-top: 150px;
-  font-size: 1rem;
-  color: #ddd;
-  opacity: 0;
-}
-
-section .visual figcaption p.show {
-  -webkit-animation: p .5s .7s forwards;
-          animation: p .5s .7s forwards;
-}
-
-@-webkit-keyframes h1 {
-  100% {
-    opacity: 1;
-    margin-top: 0%;
-  }
-}
-
+  height: 100%; }
+  section .visual {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative; }
+    section .visual img:nth-of-type(1) {
+      position: relative;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 50%; }
+    section .visual img:nth-of-type(2) {
+      position: relative;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 50%; }
+    section .visual img:nth-of-type(1).left {
+      animation: aniPosition1 .5s linear forwards; }
+    section .visual img:nth-of-type(2).right {
+      animation: aniPosition2 .5s linear forwards; }
+    section .visual figcaption {
+      z-index: 10;
+      position: absolute;
+      left: 25%;
+      top: 35%;
+      opacity: 1;
+      text-align: center;
+      color: #fff;
+      transition: .5s; }
+      section .visual figcaption h1 {
+        color: #fff;
+        font-size: 4em;
+        position: relative;
+        opacity: 0;
+        margin-top: -5%; }
+      section .visual figcaption h1.show {
+        animation: h1 1s forwards; }
+      section .visual figcaption h1:after {
+        content: '';
+        display: inline-block;
+        width: 0%;
+        height: 2px;
+        background-color: #ddd;
+        position: absolute;
+        left: 50%;
+        bottom: -10px;
+        transition: .5s .5s; }
+      section .visual figcaption h1.show:after {
+        width: 100%;
+        left: 0; }
+      section .visual figcaption p {
+        white-space: pre-line;
+        margin-top: 150px;
+        font-size: 1rem;
+        color: #ddd;
+        opacity: 0; }
+      section .visual figcaption p.show {
+        animation: p .5s .7s forwards; }
 @keyframes h1 {
   100% {
     opacity: 1;
-    margin-top: 0%;
-  }
-}
-
-@-webkit-keyframes p {
-  100% {
-    opacity: 1;
-    margin-top: 100px;
-  }
-}
-
+    margin-top: 0%; } }
 @keyframes p {
   100% {
     opacity: 1;
-    margin-top: 100px;
-  }
-}
-
+    margin-top: 100px; } }
 footer {
   position: absolute;
   left: 0;
   bottom: 0;
-  text-align: center;
-}
-
-footer p {
-  color: #ddd;
-  position: relative;
-  padding: 2%;
-  margin: 0 auto;
-}
-
-@-webkit-keyframes aniPosition1 {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  50% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-  100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
+  text-align: center; }
+  footer p {
+    color: #ddd;
+    position: relative;
+    padding: 2%;
+    margin: 0 auto; }
 
 @keyframes aniPosition1 {
   0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
+    transform: translateX(0%); }
   50% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
+    transform: translateX(-50%); }
   100% {
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-  }
-}
-
-@-webkit-keyframes aniPosition2 {
-  0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
-  50% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-  }
-  100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
+    transform: translateX(-100%); } }
 @keyframes aniPosition2 {
   0% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
+    transform: translateX(0%); }
   50% {
-    -webkit-transform: translateX(50%);
-            transform: translateX(50%);
-  }
+    transform: translateX(50%); }
   100% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-}
-
+    transform: translateX(100%); } }
 @media (max-width: 1024px) {
   section .visual figcaption {
-    left: 15%;
-  }
-  section .visual figcaption h1 {
-    font-size: 3em;
-  }
-}
-
+    left: 15%; }
+    section .visual figcaption h1 {
+      font-size: 3em; } }
 @media (max-width: 768px) {
   section .visual figcaption {
-    left: 7%;
-  }
-  section .visual figcaption h1 {
-    font-size: 2em;
-  }
-  section .visual figcaption p {
-    padding: 0 3% 0 3%;
-  }
+    left: 7%; }
+    section .visual figcaption h1 {
+      font-size: 2em; }
+    section .visual figcaption p {
+      padding: 0 3% 0 3%; }
+
   section .visual figcaption h1.show:after {
     width: 70%;
-    left: 15%;
-  }
-}
-
+    left: 15%; } }
 @media (max-width: 480px) {
   header div {
     text-align: center;
-    margin-top: 55px;
-  }
+    margin-top: 55px; }
+
   section .visual figcaption {
-    left: 0%;
-  }
-  section .visual figcaption h1 {
-    font-size: 1.5em;
-  }
-  section .visual figcaption p {
-    padding: 0 10% 0 10%;
-  }
+    left: 0%; }
+    section .visual figcaption h1 {
+      font-size: 1.5em; }
+    section .visual figcaption p {
+      padding: 0 10% 0 10%; }
+
   section .visual figcaption h1.show:after {
     width: 75%;
-    left: 12%;
-  }
-}
+    left: 12%; } }
+
 /*# sourceMappingURL=index.css.map */
